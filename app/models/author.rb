@@ -1,4 +1,4 @@
 class Author < ActiveRecord::Base
-  validates :name, presence: true, uniqueness: true, format: { with: /\A[a-zA-Z]+\z/,
-    message: "only allows letters" }
+  validates :name, presence: true, uniqueness: true
+  validates :phone_number, length: {is: 9}
 end
